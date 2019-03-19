@@ -4,6 +4,7 @@ public class Conta {
 	
 	private String titular;
 	private String numeroConta;
+	private double saldo;
 	
 	public String getTitular() {
 		return this.titular;
@@ -16,5 +17,13 @@ public class Conta {
 	public Conta(String titular, String numeroConta) {
 		this.titular = titular;
 		this.numeroConta = numeroConta;
+	}
+
+	public double getSaldo() {
+		return this.saldo;
+	}
+
+	public void depositar(double valor) { 
+		this.saldo = this.saldo + valor;
 	}
 }

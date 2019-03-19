@@ -23,4 +23,30 @@ class ContaTests {
 		assertEquals(titular, conta.getTitular());
 		assertEquals(numeroConta, conta.getNumeroConta());
 	}
+	
+	@Test
+	void uma_nova_conta_deve_ter_saldo_zero() {
+		//1. Configuração
+		Conta conta = new Conta("João da Silva", "123-456");
+		
+		//2. Execução
+		double saldo = conta.getSaldo();
+		
+		//3. Validação / Asserção
+		assertEquals(0, saldo);
+	}
+	
+	@Test
+	void devo_conseguir_depositar_um_valor_na_conta() {
+		//1. Configuração
+		Conta conta = new Conta("João da Silva", "123-456");
+		double valorADepositar = 100;
+		
+		//2. Execução
+		conta.depositar(valorADepositar);
+		
+		//3. Validação / Asserção
+		assertEquals(valorADepositar, conta.getSaldo());
+	}
+
 }
