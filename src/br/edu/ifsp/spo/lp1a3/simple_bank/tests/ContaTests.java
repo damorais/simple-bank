@@ -6,11 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import br.edu.ifsp.spo.lp1a3.simple_bank.Conta;
 
-class ContaTests {
+public class ContaTests {
 
-	
 	@Test
-	void deve_conseguir_criar_uma_classe_conta_com_titular_e_numero() {
+	public void deve_conseguir_criar_uma_conta_com_titular_e_numero() {
 		// 1. Configuração
 		String titular = "João da Silva";
 		String numeroConta = "001-002";
@@ -25,7 +24,7 @@ class ContaTests {
 	}
 	
 	@Test
-	void uma_nova_conta_deve_ter_saldo_zero() {
+	public void uma_nova_conta_deve_ter_saldo_zero() {
 		//1. Configuração
 		Conta conta = new Conta("João da Silva", "123-456");
 		
@@ -37,7 +36,7 @@ class ContaTests {
 	}
 	
 	@Test
-	void devo_conseguir_depositar_um_valor_na_conta() {
+	public void devo_conseguir_depositar_um_valor_na_conta() {
 		//1. Configuração
 		Conta conta = new Conta("João da Silva", "123-456");
 		double valorADepositar = 100;
@@ -50,7 +49,7 @@ class ContaTests {
 	}
 	
 	@Test
-	void devo_conseguir_retirar_um_valor_da_conta() {
+	public void devo_conseguir_retirar_um_valor_da_conta() {
 		//1. Configuração
 		Conta conta = new Conta("João da Silva", "123-456");
 		conta.depositar(100);
@@ -66,7 +65,7 @@ class ContaTests {
 	}
 	
 	@Test
-	void devo_conseguir_transferir_valores_para_outra_conta() {
+	public void devo_conseguir_transferir_valores_para_outra_conta() {
 		//1. Configuração
 		Conta contaOrigem = new Conta("João da Silva", "123-456");
 		contaOrigem.depositar(1000);

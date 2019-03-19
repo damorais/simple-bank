@@ -13,14 +13,14 @@ public class Conta {
 	public String getNumeroConta() {
 		return this.numeroConta;
 	}
+
+	public double getSaldo() {
+		return this.saldo;
+	}
 	
 	public Conta(String titular, String numeroConta) {
 		this.titular = titular;
 		this.numeroConta = numeroConta;
-	}
-
-	public double getSaldo() {
-		return this.saldo;
 	}
 
 	public void depositar(double valor) { 
