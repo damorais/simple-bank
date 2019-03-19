@@ -26,4 +26,9 @@ public class Conta {
 	public void depositar(double valor) { 
 		this.saldo = this.saldo + valor;
 	}
+
+	public double retirar(double valor) {
+		this.saldo = this.saldo - valor;	
+		return valor;
+	}
 }

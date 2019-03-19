@@ -48,5 +48,20 @@ class ContaTests {
 		//3. Validação / Asserção
 		assertEquals(valorADepositar, conta.getSaldo());
 	}
-
+	
+	@Test
+	void devo_conseguir_retirar_um_valor_da_conta() {
+		//1. Configuração
+		Conta conta = new Conta("João da Silva", "123-456");
+		conta.depositar(100);
+		double valorARetirar = 70;
+		double saldoFinalEsperado = 30;
+		
+		//2. Execução
+		double valorRetirado = conta.retirar(valorARetirar);
+		
+		//3. Validação / Asserção
+		assertEquals(valorARetirar, valorRetirado);
+		assertEquals(saldoFinalEsperado, conta.getSaldo());
+	}
 }
