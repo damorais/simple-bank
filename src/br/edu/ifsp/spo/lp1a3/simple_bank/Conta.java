@@ -31,4 +31,9 @@ public class Conta {
 		this.saldo = this.saldo - valor;	
 		return valor;
 	}
+
+	public void transferirPara(Conta contaDestino, double valorATransferir) {
+		double valor = this.retirar(valorATransferir);
+		contaDestino.depositar(valor);
+	}
 }

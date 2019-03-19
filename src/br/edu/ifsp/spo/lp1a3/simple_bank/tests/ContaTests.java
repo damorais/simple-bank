@@ -64,4 +64,24 @@ class ContaTests {
 		assertEquals(valorARetirar, valorRetirado);
 		assertEquals(saldoFinalEsperado, conta.getSaldo());
 	}
+	
+	@Test
+	void devo_conseguir_transferir_valores_para_outra_conta() {
+		//1. Configuração
+		Conta contaOrigem = new Conta("João da Silva", "123-456");
+		contaOrigem.depositar(1000);
+		double valorATransferir = 150;
+		double saldoEsperadoOrigem = 1000 - valorATransferir;
+		double saldoEsperadoDestino = valorATransferir;
+		
+		Conta contaDestino = new Conta("Maria da Silva", "123-457");
+		
+		//2. Execução
+		contaOrigem.transferirPara(contaDestino, valorATransferir);
+		
+		//3. Validação / Asserção
+		assertEquals(saldoEsperadoOrigem, contaOrigem.getSaldo());
+		assertEquals(saldoEsperadoDestino, contaDestino.getSaldo());
+		
+	}
 }
