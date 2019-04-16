@@ -32,7 +32,7 @@ public class Conta {
 		return valor;
 	}
 
-	public void transferirPara(Conta contaDestino, double valorATransferir) {
+	public void transferirPara(Conta contaDestino, double valorATransferir) throws SaldoInsuficienteException {
 		double valor = this.retirar(valorATransferir);
 		contaDestino.depositar(valor);
 	}

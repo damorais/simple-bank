@@ -81,6 +81,6 @@ public class ContaTests {
 		//3. Validação / Asserção
 		assertEquals(saldoEsperadoOrigem, contaOrigem.getSaldo());
 		assertEquals(saldoEsperadoDestino, contaDestino.getSaldo());
-		
 	}
+	
 }
